@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Practice</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap'); 
+    *{
+      font-family: 'Montserrat', sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 3.5em;
+      font-weight: bold;
+      background-color: #000;
+    }
+    .wrap .txt-wrap span{
+    animation: neon 4.4s infinite;
+    color: #222;
+    letter-spacing: 10px;
+    }
+    .wrap .txt-wrap span:nth-child(1) {
+      animation-delay: 0.4s;
+    }
+    .wrap .txt-wrap span:nth-child(2) {
+      animation-delay: 0.8s;
+    }
+    .wrap .txt-wrap span:nth-child(3) {
+      animation-delay: 1.2s;
+    }
+    .wrap .txt-wrap span:nth-child(4) {
+      animation-delay: 1.6s;
+    }
+    .wrap .txt-wrap span:nth-child(5) {
+      animation-delay: 2s;
+    }
+    .wrap .txt-wrap span:nth-child(6) {
+      animation-delay: 2.4s;
+    }
+    .wrap .txt-wrap span:nth-child(7) {
+      animation-delay: 2.8s;
+    }
+    .wrap .txt-wrap span:nth-child(8) {
+      animation-delay: 3.2s;
+    }
+    .wrap .txt-wrap span:nth-child(9) {
+      animation-delay:3.6s;
+    }
+    .wrap .txt-wrap span:nth-child(10) {
+      animation-delay: 4s;
+    }   
+    .wrap .txt-wrap span:nth-child(11) {
+      animation-delay:4.4s;
+    }
+    @keyframes neon{
+      0% {
+        color: #fff;
+      text-shadow: 0 0 20px #f1c40f,
+     0 0 40px #f1c40f,
+     0 0 60px #f1c40f,
+     0 0 80px #f1c40f;
+      }
+      5% {
+        color: #222;
+        text-shadow: none;
+      }
+    }
+    .btn_X {
+      position: fixed;
+      top: 20px;
+      right: 4%;
+      border-radius: 50px;
+      border: 1px solid #ffffff73;
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+    }
+    .btn_X:after,
+    .btn_X:before {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background-color: #ffffff73;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    .btn_X:after {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    .btn_X:before {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="txt-wrap">
+      <span>W</span>
+      <span>E</span>
+      <span>B</span>
+      <span>C</span>
+      <span>O</span>
+      <span>D</span>
+      <span>I</span>
+      <span>N</span>
+      <span>G</span>
+    </div>
+  </div> 
+  <div class="btn_X" onclick="window.close()"></div>
+</body>
+</html>
